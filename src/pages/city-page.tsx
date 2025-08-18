@@ -7,7 +7,7 @@ import CurrentWeather from "@/components/current_weather";
 import HourlyTemprature from "@/components/hourly_temprature";
 import WeatherForcast from "@/components/WeatherForcast";
 import WeatherDetails from "../components/weatherDetails";
-import FavoriteButton from "@/components/ui/favorite_buttton";
+import { FavoriteButton } from "@/components/ui/favorite_buttton";
 
 const CityPage = () => {
   const [searchParams] = useSearchParams();
@@ -37,8 +37,10 @@ const CityPage = () => {
         <h1 className="text-3xl font-bold tracking-tight">
           {params.cityName} , {weatherQuery.data.sys.country}
         </h1>
-        <div> 
-          <FavoriteButton data={{...weatherQuery.data,name: params.cityName}}/>
+        <div>
+          <FavoriteButton
+            data={{ ...weatherQuery.data, name: params.cityName }}
+          />
         </div>
       </div>
 

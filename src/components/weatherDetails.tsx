@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 interface WeatherDetailsProps {
   data: WeatherData;
 }
-const weatherDetails = ({ data }: WeatherDetailsProps) => {
+const WeatherDetails = ({ data }: WeatherDetailsProps) => {
   const { wind, main, sys } = data;
 
   const getWindDirection = (degree: number) => {
@@ -78,4 +78,4 @@ const weatherDetails = ({ data }: WeatherDetailsProps) => {
   );
 };
 
-export default weatherDetails;
+export default WeatherDetails;
